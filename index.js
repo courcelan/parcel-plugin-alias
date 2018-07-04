@@ -5,7 +5,9 @@ module.exports = (bundler) => {
     let options;
 
     try {
-        options = require(path.resolve(__dirname, '../../.aliasrc.js'));
+
+        options = require(path.resolve(process.cwd(), '.aliasrc.js'));
+
     } catch(e) {
         // no handler
     }
